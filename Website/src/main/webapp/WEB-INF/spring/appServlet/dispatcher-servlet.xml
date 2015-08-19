@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context-3.0.xsd
+			http://www.springframework.org/schema/mvc
+			http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<mvc:annotation-driven />
+	<context:component-scan base-package="vn.edu.ctu" />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean"> -->
+	<!-- <property name="host" value="192.168.1.104:27017" /> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"> -->
+	<!-- <constructor-arg name="mongo" ref="mongo" /> -->
+	<!-- <constructor-arg name="databaseName" value="project" /> -->
+	<!-- </bean> -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10000000" />
+	</bean>
+	<import resource="mongo-servlet.xml" />
+	<bean id="studentDAO" class="vn.edu.ctu.dao.StudentDAOImpl" />
+	<bean id="lopHocPhanDAO" class="vn.edu.ctu.dao.LopHocPhanDAOImpl" />
+	<bean id="keHoachDAO" class="vn.edu.ctu.dao.KeHoachDAOImpl" />
+	<bean id="thoiKhoaBieuDAO" class="vn.edu.ctu.dao.ThoiKhoaBieuDAOImpl" />
+	<context:annotation-config />
+</beans> 

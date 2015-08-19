@@ -1,0 +1,82 @@
+#header {
+	text-align: center;
+	width: 100%;
+}
+
+#header img {
+	width: 1140px;
+	height: 99px;
+}
+
+.header {
+	
+}
+
+#hrr {
+	border-style: solid;
+	border-width: 2px;
+}
+
+.content {
+	height: 500px;
+}
+
+.footer p {
+	text-align: center;
+	padding-bottom: 0px;
+}
+
+#ms {
+	color: #E6E6E6;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-weight: bold;
+	padding: 0px;
+	font-size: 8pt;
+	text-align: right;
+}
+
+#ms a {
+	color: #E6E6E6;
+}
+
+#iconmenu {
+	font-size: 80px;
+	color: #CCCCCC;
+}
+
+.font-menu {
+	font-size: 10pt;
+}
+
+.cl {
+	background-color: #EEE5D4;
+}
+
+#kehoach {
+	background-color: #FFFFFF;
+}
+
+#pinfo {
+	margin-top: 4px; background-color : #D1FFD1;
+	font-weight: bold;
+	background-color: #D1FFD1;
+}
+
+#trheader {
+	background-color: #D1FFD1;
+}
+#iconmenu {
+	font-size: 75px;
+}
+#dothoc {
+	background-color: #D1FFD1;
+}
+#label1{
+	padding-right: 15px;
+	padding-left: 40px;
+}
+#table1 {
+	padding: 10px;
+}
